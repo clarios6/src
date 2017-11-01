@@ -13,9 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var totalScore = findViewById<TextView>(R.id.total_score) as TextView
-        var lastScore = findViewById<TextView>(R.id.last_score) as TextView
-        var startButton = findViewById<Button>(R.id.start_button) as Button
+//        var totalScore = findViewById<TextView>(R.id.total_score) as TextView
+//        var lastScore = findViewById<TextView>(R.id.last_score) as TextView
+//        var startButton = findViewById<Button>(R.id.start_button) as Button
+
+        var totalScore = findViewById(R.id.total_score) as TextView
+        var lastScore = findViewById(R.id.last_score) as TextView
+        var startButton = findViewById(R.id.start_button) as Button
 
         startButton.setOnClickListener{
             val intent = Intent(this, QuizActivity::class.java)
@@ -26,8 +30,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        var totalScore = findViewById<TextView>(R.id.total_score) as TextView
-        var lastScore = findViewById<TextView>(R.id.last_score) as TextView
+//        var totalScore = findViewById<TextView>(R.id.total_score) as TextView
+//        var lastScore = findViewById<TextView>(R.id.last_score) as TextView
+        var totalScore = findViewById(R.id.total_score) as TextView
+        var lastScore = findViewById(R.id.last_score) as TextView
         lastScore.text = "" + ScoreComm.score
         ScoreComm.totScore += ScoreComm.score
         totalScore.text = "" + ScoreComm.totScore
