@@ -27,11 +27,17 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
-        mScoreView = findViewById<TextView>(R.id.actual_score) as TextView
-        mQuestionView = findViewById<TextView>(R.id.question) as TextView
-        mButtonChoiceA = findViewById<Button>(R.id.choiceA) as Button
-        mButtonChoiceB = findViewById<Button>(R.id.choiceB) as Button
-        mButtonChoiceC = findViewById<Button>(R.id.choiceC) as Button
+//        mScoreView = findViewById<TextView>(R.id.actual_score) as TextView
+//        mQuestionView = findViewById<TextView>(R.id.question) as TextView
+//        mButtonChoiceA = findViewById<Button>(R.id.choiceA) as Button
+//        mButtonChoiceB = findViewById<Button>(R.id.choiceB) as Button
+//        mButtonChoiceC = findViewById<Button>(R.id.choiceC) as Button
+
+        mScoreView = findViewById(R.id.actual_score) as TextView
+        mQuestionView = findViewById(R.id.question) as TextView
+        mButtonChoiceA = findViewById(R.id.choiceA) as Button
+        mButtonChoiceB = findViewById(R.id.choiceB) as Button
+        mButtonChoiceC = findViewById(R.id.choiceC) as Button
 
 
         updateQuestion()
